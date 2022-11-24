@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Cancion {
+        constructor(titulo, artista, duracion, anio) {
+          this.titulo = titulo;
+          this.artista = artista;
+          this.duracion = duracion;
+          this.anio = anio;
+        }
+        //metodo
+        gettitulo = function () {
+          return this.titulo;
+        };
+        getartista = function () {
+          return this.artista;
+        };
+        getduracion = function () {
+          return this.duracion;
+        };
+        getannio = function () {
+          return this.anio;
+        };
+        popular() {
+            console.log(this.duracion)
+          if (this.duracion >= 1000)
+          {
+            console.log("la canción es popular");
+          }
+        }
+
+        mostrar() {
+          console.log(
+            `Mostrar ${this.titulo} interpretado por ${this.artista} se lanzó en ${this.anio}`
+          );
+        }
+      }
+      const cancion = new Cancion("nuevo", "carlos", 1000, "08/11/2022" );
+      console.log(cancion.gettitulo());
+      console.log(cancion);
+      cancion.mostrar();
+      cancion.popular();
+
+      // function cancion (titulo,artista,duracion,anio){
+
+      // this.titulo=titulo;
+      // this.artista=artista;
+      // this.duracion=duracion;
+      // this.anio=anio
+      // //metodo
+      // this.gettitulo=function(){
+      //     return titulo;
+      // }
+      // this.getartista=function(){
+      //     return artista;
+      // }
+      // this.getduracion=function(){
+      //     return duracion;
+      // }
+      // this.getaño=function(){
+      //     return anio;
+      // }
+      //   popular ();{
+      //     if (this.duracion < 1000){
+      //         console.log("la concion es popular")
+      //     }
+      //   }
+
+      //   mostrar ();{ console.log("mostar" + titulo + "interpretado pro "+ artista + "se lanzo en "+ anio);
+      //   }
+      // }
+      // const cancionNueva = cancion ("nuevo", "carlos","08/11/2022","700")
+      // console.log(cancionNueva);
+      // cancion.mostrar();
+      // cancion.popular();
+    </script>
+  </body>
+</html>

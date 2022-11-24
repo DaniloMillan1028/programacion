@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aaaa</title>
+  </head>
+  <body>
+    <script>
+      /* Diseñar el algoritmo correspondiente a un programa, que:
+      Crea una tabla bidimensional de longitud 5x5 y nombre ‘matriz’.
+      Carga la tabla con valores numéricos enteros.
+      Suma todos los elementos de cada fila y todos los elementos de cada columna visualizando los resultados en pantalla.*/
+
+      let suma;
+      let columnas = [0, 0, 0, 0, 0];
+      let num_Filas, num_Columnas;
+
+      let matriz = [
+        [11, 10, 3, 7, 8],
+        [15, 6, 1, 9, 2],
+        [67, 13, 16, 14, 5],
+        [4, 12, 90, 11, 76],
+        [53, 31, 16, 10, 4],
+      ];
+
+      matriz.forEach((fila, i) => {
+        let suma_numerosfila = fila.reduce((a, c) => a + c);
+        console.log("la suma de la fila ", i, " es ", suma_numerosfila);
+
+        fila.forEach((columna, i) => {
+          columnas[i] += columna;
+        });
+      });
+      console.log("");
+      columnas.forEach((element, i) => {
+        console.log("la suma de la columna ", i, " es ", element);
+      });
+    </script>
+  </body>
+</html>

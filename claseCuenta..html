@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script >
+       /* Crea una clase Cuenta con los métodos ingreso, reintegro y transferencia. La clase contendrá un constructor 
+        por defecto y los métodos getters y setters.*/
+
+        class Cuenta{
+                ingreso=0;
+                reintegro=0;
+                transferencia =0;
+            constructor(ingreso,reintegro,transferencia){
+                this.ingreso = ingreso;
+                this.reintegro = reintegro;
+                this.transferencia = transferencia;
+            }
+                get getIngreso(){
+                    return this.ingreso;
+                }
+                set setIngreso(ingreso){
+                    
+                    this.ingreso = ingreso;
+                }
+                get getReintegro(){
+                    return this.reintegro;
+                }
+                set setReintegro(reintegro){
+                    this.reintegro = reintegro;
+                }
+                 getTransferencia(){
+                    return this.transferencia;
+                }
+                set setTransferencia(transferencia){
+                    this.transferencia = transferencia;
+            }
+        }
+        const cuenta1 = new Cuenta(400,15,65)
+        console.log(cuenta1)
+    </script>
+      HOLA COMPADRE
+    </script>
+  </body>
+</html>

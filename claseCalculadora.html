@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOLA COMPA-_-</title>
+  </head>
+  <body>
+    <script>
+      /*Realizar un programa en el cual se declaran dos valores enteros por teclado
+      utilizando el método constructor. Calcular después la suma, resta, multiplicación y 
+      división. Utilizar un método para cada una e imprimir los resultados obtenidos. Llamar a la clase 
+      Calculadora.*/
+
+      class Calculadora {
+        constructor(valor1, valor2) {
+          this.valor1 = valor1;
+          this.valor2 = valor2;
+          this.resultado = 0;
+        }
+        suma() {
+          this.resultado = this.valor1 + this.valor2;
+          return `la suma de ${this.valor1}  y ${this.valor2} es: ${this.resultado}`;
+        }
+        resta() {
+          this.resultado = this.valor1 - this.valor2;
+          return `La resta de ${this.valor1} y ${this.valor2} es:  ${this.resultado}`;
+        }
+        multiplicacion() {
+          this.resultado = this.valor1 * this.valor2;
+          return `La multiplicacion de ${this.valor1} y ${this.valor2} es:  ${this.resultado} `;
+        }
+        division() {
+          this.resultado = this.valor1 / this.valor2;
+          return `La division de ${this.valor1} y ${this.valor2} es:  ${this.resultado}`;
+        }
+      }
+
+      let v1 = prompt(`ingrese un valor1`);
+      let value1 = parseInt(v1);
+      let v2 = prompt(`ingrese el valor2`);
+      let value2 = parseInt(v2);
+      let calculadora1 = new Calculadora(value1, value2);
+      console.log(calculadora1.suma());
+      console.log(calculadora1.resta());
+      console.log(calculadora1.multiplicacion());
+      console.log(calculadora1.division());
+    </script>
+    HOLA COMPA -_-
+  </body>
+</html>

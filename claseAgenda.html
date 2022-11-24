@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOLA COMPA-_-</title>
+  </head>
+  <body>
+    <script>
+      /*Realizar una clase que administre una agenda. Se debe almacenar para cada contacto el 
+      nombre, el teléfono y el email. Además deberá mostrar un menú con las siguientes opciones
+                    Añadir contacto
+                    Lista de contactos
+                    Buscar contacto
+                    Editar contacto
+                    Cerrar agend*/
+
+      class Agenda {
+        constructor() {
+          this.contactos = [];
+        }
+
+        anadirContacto(contacto) {
+          this.contactos.push(contacto);
+        }
+
+        listarContactos() {
+          return this.contactos;
+        }
+
+        buscarContacto(nombre) {
+          return this.contactos.find((contacto) => {
+            return contacto.nombre === nombre;
+          });
+        }
+
+        editarContacto(nombre, nombreEditar, telefono, correo) {
+          this.contactos.map((contacto) => {
+            if (contacto.nombre === nombre) {
+              contacto.nombre = nombreEditar;
+              contacto.telefono = telefono;
+              contacto.correo = correo;
+
+              return this.contactos;
+            }
+          });
+
+          return this.contactos;
+        }
+      }
+
+      class Contacto {
+        constructor(nombre, telefono, correo, menu) {
+          this.nombre = nombre;
+          this.telefono = telefono;
+          this.correo = correo;
+          this.menu = menu;
+        }
+      }
+      let menu = "menu";
+      menu = "1 anir contacto";
+      menu = "2 listar contacto";
+      menu = "3 buscar contacto";
+      menu = "4 editar contacto";
+      menu = "5 cerrar agenda";
+      let cod = 0;
+      do {
+        cod = parseInt(prompt(menu));
+        switch (cod) {
+          case 1:
+            document.write("1 anir contacto");
+            break;
+          case 2:
+            document.write("2 listar contacto");
+            break;
+          case 3:
+            document.write("3 buscar contacto");
+            break;
+          case 4:
+            document.write("4 editar contacto");
+            break;
+          case 5:
+            document.write("5 cerrar agenda");
+            break;
+        }
+      } while (cod != 5);
+      menu = menu;
+      let agenda = new Agenda();
+      let contacto1 = new Contacto("Pepito", "3001234567", "correo@correo.com");
+      let contacto2 = new Contacto("Maria", "3001234567", "correo@correo.com");
+      agenda.anadirContacto(contacto1);
+      agenda.anadirContacto(contacto2);
+
+      console.log(agenda.listarContactos());
+      console.log(agenda.buscarContacto("Pepito"));
+      console.log(
+        agenda.editarContacto(
+          "Pepito",
+          "Juana",
+          "3013455660",
+          "juana@correo.com"
+        )
+      );
+      ssss;
+    </script>
+    HOLA COMPA -_-
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script >
+/*Queremos guardar los nombres y las edades de los alumnos de un curso. Realiza 
+un programa que introduzca el nombre y la edad de cada alumno. El proceso de lectura de 
+datos terminará cuando se introduzca como nombre un asterisco (*) Al finalizar se mostrará los siguientes datos:
+Todos los alumnos mayores de edad.
+Los alumnos mayores (los que tienen más edad) - el mayor?*/
+
+     let nombres = []
+     let edades = []
+     let mayoresEdad = []
+     let edad, nombre, edadMayor = 1, nombreMayor = ''
+
+        
+     do {
+      nombre = prompt("Digite el nombre ")
+      if(nombre !== "*"){
+        edad = Number(prompt("Ingrese la edad"))
+
+        nombres.push(nombre)
+        edades.push(edad)
+
+        if( edad >= 18 ){
+          mayoresEdad.push(nombre)
+        }
+
+        if( edad <= edadMayor )
+          edadMayor = edad
+          nombreMayor = nombre
+        }
+      }
+       while(nombre !== "*");
+
+     console.log(mayoresEdad)
+     console.log('La persona mayor es: ' + nombreMayor)
+    
+      
+    </script>
+      HOLA COMPADRE
+    </script>
+  </body>
+</html>

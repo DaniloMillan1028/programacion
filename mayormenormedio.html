@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="vectores.js">
+
+      const numeros = [5, 1, 4];
+      const vectores = {
+        mayor: "",
+        menor: "",
+        media: "",
+      };
+      numeros.forEach((element, index) => {
+        // console.log(element, "padre")
+        numeros.forEach((ele, index) => {
+          // console.log(ele, "hijo")
+
+          if (element > ele) {
+            if (vectores.mayor) {
+              if (vectores.mayor > element) {
+              } else {
+                vectores.mayor = element;
+              }
+            } else {
+              vectores.mayor = element;
+            }
+          }
+          if (element < ele) {
+            if (vectores.menor) {
+              if (vectores.menor < element) {
+              } else {
+                vectores.menor = element;
+              }
+            } else {
+              vectores.menor = element;
+            }
+          }
+        });
+      });
+      vectores.media = numeros.reduce((sumatoria, numero) => {
+        return (sumatoria += numero / numeros.length);
+      });
+      console.log("numero mayor: ", vectores.mayor);
+      console.log("numero menor: ", vectores.menor);
+      console.log("numero de la media", vectores.media);
+
+            /*if(num1>num2 && num1>num3){
+              mayor =num1
+            }else if(num2>num1&&num2>num3){
+              mayor=num2
+            }else{
+              mayor= num3
+
+            }if(num1<num2 && num1<num3){
+              menor =num1
+            }else if(num2<num1&&num2<num3){
+              menor=num2
+            }else{
+              menor= num3
+
+            }if(num1<num2 && num1>num3){
+              medio =num1
+            }else if(num2<num1&&num2>num3){
+              medio=num2
+            }else
+              medio= num3
+            console.log("numero mayor es " + mayor )
+
+            console.log("numero menor es " + menor)
+
+            console.log("numero medio es " + medio)*/
+            //console.log ("numero menor es:" + menor,"numero mayor es:"+ mayor ," numero medio es : " + medio )
+    </script>
+  </body>
+</html>

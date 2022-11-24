@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const personas = [
+        { name: "juan" },
+        { name: "lucas" },
+        { name: "jean" },
+        { name: "jose" },
+        { name: "santi" },
+        { name: "santi" },
+      ];
+      let indice = 1;
+
+      //valorBuscado = "jean";
+       
+      valorBuscado = prompt("ingrese un nombre").toLowerCase().trim();
+      let personaEncontrada = personas.findIndex(
+        (persona) => persona.name === valorBuscado
+      );
+      if (personaEncontrada < 0) alert(`No existe el pato ${valorBuscado}`);
+      else {
+        console.log(personaEncontrada);
+       indice = personas.map((persona) => persona.name).indexOf(valorBuscado);
+        console.log("resultado es :", personas[personaEncontrada]);
+        console.log("elemento buscado esta en posicion", personaEncontrada);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOLA COMPA-_-</title>
+  </head>
+  <body>
+    <script>
+      /*Realizar un programa que conste de una clase llamada Alumno que tenga como atributos el nombre y la nota del alumno.
+      Definir los métodos para inicializar sus atributos, imprimirlos 
+     y mostrar un mensaje con el resultado de la nota y si ha aprobado o no.*/
+
+      class Alumno {
+        constructor(nombre, nota) {
+          this.nombre = nombre;
+          this.nota = nota;
+        }
+        resultado() {
+          if (this.nota < 5) {
+            return "El alumno ha reprobado";
+          } else {
+            return "El alumno ha aprobado";
+          }
+        }
+      }
+      prompt(`Digite el nombre del alumno`);
+      prompt(`Digite la nota del alumno`);
+
+      let alumno1 = new Alumno();
+      console.log(
+        `El Alumno: ${alumno1.nombre} obtuvo una nota de ${
+          alumno1.nota
+        } ${alumno1.resultado()}`
+      );
+    </script>
+    HOLA COMPA -_-
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOLA COMPA-_-</title>
+  </head>
+  <body>
+    <script>
+      /* Crea una clase Contador con los métodos para incrementar y
+       decrementar el contador. La clase contendrá un constructor por defecto y
+        los métodos getters y setters. */
+
+      class Contador {
+        constructor() {}
+
+        cont = 10;
+
+        //método incrementar contador
+        incrementar() {
+          this.cont++;
+        }
+        //método incrementar contador
+        decrementar() {
+          this.cont--;
+        }
+
+        get cuenta() {
+          return `La cuenta actual es: ${this.cont}`;
+        }
+
+        set cuenta(cuenta) {
+          this.cont = cuenta;
+        }
+      }
+      const contador1 = new Contador(10);
+      console.log(contador1);
+    </script>
+    HOLA COMPA -_-
+  </body>
+</html>

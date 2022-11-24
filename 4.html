@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script >
+//Suponga un array con N números enteros generados aleatoriamente y mostrados en pantalla, 
+//N debe ser un número impar, mostrar en pantalla el valor que ocupa el centro del array.
+
+
+let notas = [5,5,12,9,20,17,8,18,4,7,2,15,19];
+
+      let suma = 0;
+      let suma2 = 0;
+      let cantidadReprobados = 0;
+      let cantidadAprobados = 0;
+        notas.forEach(nota => {
+            if(nota > 0 && notas < 10){
+            suma += nota;
+            cantidadReprobados += 1;
+        }
+
+        else if(nota > 10 && nota < 20){
+            suma2 += nota;
+            cantidadAprobados += 1;
+        }
+      })
+      console.log("cantidad de aprobado es:")
+      console.log("cantidad de reprobados es: ")
+      console.log("El promedio es:")
+    
+      
+    </script>
+      HOLA COMPADRE
+    </script>
+  </body>
+</html>

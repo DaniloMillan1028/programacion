@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script >
+        /*Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular y cantidad (puede tener 
+        decimales).
+        El titular será obligatorio y la cantidad es opcional. Crea dos constructores que cumplan lo anterior.
+        Crea sus métodos , set y toString.
+        Tendrá dos métodos especiales:
+        ingresar(double cantidad): se ingresa una cantidad a la cuenta, si la cantidad introducida es negativa, no se hará nada.
+        retirar(double cadad): se retira una cantidad a la cuenta, si restando la cantidad actual a la que nos pasan es 
+        negativa, la cantidad de la cuenta pasa a ser 0.*/
+
+class Cuenta {
+    
+    constructor(titulo,cantidad){
+        this.titulo=titulo
+        this.cantidad=cantidad
+}
+cuenta(titulo,cantidad){
+    this.titulo= titulo
+    if(cantidad< 0){
+        this.cantidad=0;
+    }else{
+        this.cantidad = doublecantidad
+    }
+}
+ titulo(){
+    return`El titulo actual es: ${this.titulo}`;
+}
+  titulo(titulo){
+    this.titulo = titulo;
+}
+ cantidad(){
+    return `La cantidad actual es: ${this.cantidad}`;
+}
+ cantidad(doublecantidad){
+    this.cantidad = doublecantidad
+}
+ ingresar( cantidad) {
+        if(cantidad > 0){
+            this.cantidad += cantidad;   
+        }
+    }
+ 
+     retirar( cantidad) {
+        if (this.cantidad - cantidad < 0) {
+            this.cantidad = 0;
+        } else {
+            this.cantidad -= cantidad;
+        }
+    }
+    toString(){
+        return `Titulo ${this.titulo} Cantidad ${this.cantidad}`;
+    }
+}
+let cuenta1 = new Cuenta ("sora" , 10.45)
+console.log(cuenta1.toString());
+</script>
+HOLA COMPADRE
+</script>
+</body>
+</html>
